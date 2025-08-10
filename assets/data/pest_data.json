@@ -1,0 +1,182 @@
+[
+  {
+    "crop": "Paddy",
+    "symptoms": "Yellowing and wilting of leaves near base",
+    "pest": "Stem Borer",
+    "solution": "Use pheromone traps and apply cartap hydrochloride."
+  },
+  {
+    "crop": "Paddy",
+    "symptoms": "Brown spots on leaves with gray center",
+    "pest": "Brown Spot",
+    "solution": "Use fungicides like carbendazim and improve drainage."
+  },
+  {
+    "crop": "Paddy",
+    "symptoms": "Chlorosis and hopper burn",
+    "pest": "Brown Planthopper",
+    "solution": "Avoid excessive nitrogen; apply buprofezin."
+  },
+  {
+    "crop": "Wheat",
+    "symptoms": "White powdery growth on leaves",
+    "pest": "Powdery Mildew",
+    "solution": "Spray sulfur-based fungicides."
+  },
+  {
+    "crop": "Wheat",
+    "symptoms": "Black rust pustules on stems",
+    "pest": "Stem Rust",
+    "solution": "Use resistant varieties; spray propiconazole."
+  },
+  {
+    "crop": "Wheat",
+    "symptoms": "Dead heart in young seedlings",
+    "pest": "Shoot Fly",
+    "solution": "Early sowing and use of systemic insecticides."
+  },
+  {
+    "crop": "Maize",
+    "symptoms": "Holes in leaves and tassels",
+    "pest": "Fall Armyworm",
+    "solution": "Use neem extract or spinetoram-based insecticides."
+  },
+  {
+    "crop": "Maize",
+    "symptoms": "Leaf shredding and boreholes in stalk",
+    "pest": "Stem Borer",
+    "solution": "Destroy crop residues and use chlorantraniliprole."
+  },
+  {
+    "crop": "Maize",
+    "symptoms": "Yellowing and curling of leaves",
+    "pest": "Maize Aphid",
+    "solution": "Spray dimethoate or imidacloprid."
+  },
+  {
+    "crop": "Cotton",
+    "symptoms": "White powder on bolls",
+    "pest": "Fusarium Wilt",
+    "solution": "Use disease-free seeds and proper crop rotation."
+  },
+  {
+    "crop": "Cotton",
+    "symptoms": "Boll shedding and stunted growth",
+    "pest": "Bollworm",
+    "solution": "Use Bt cotton and apply insecticides like spinosad."
+  },
+  {
+    "crop": "Cotton",
+    "symptoms": "Leaf curling and yellowing",
+    "pest": "Whitefly",
+    "solution": "Use yellow sticky traps and thiamethoxam."
+  },
+  {
+    "crop": "Sugarcane",
+    "symptoms": "Dead heart and internode boring",
+    "pest": "Early Shoot Borer",
+    "solution": "Apply chlorantraniliprole at planting."
+  },
+  {
+    "crop": "Sugarcane",
+    "symptoms": "Internode tunneling and leaf drying",
+    "pest": "Top Shoot Borer",
+    "solution": "Use cartap hydrochloride and keep fields weed-free."
+  },
+  {
+    "crop": "Sugarcane",
+    "symptoms": "White cottony growth at root zone",
+    "pest": "Root Mealybug",
+    "solution": "Apply chlorpyrifos to soil at planting time."
+  },
+  {
+    "crop": "Groundnut",
+    "symptoms": "Chlorotic rings on leaves",
+    "pest": "Bud Necrosis Virus",
+    "solution": "Control thrips using fipronil and destroy infected plants."
+  },
+  {
+    "crop": "Groundnut",
+    "symptoms": "Leaf mining and folding",
+    "pest": "Leaf Miner",
+    "solution": "Spray dimethoate during early infestation."
+  },
+  {
+    "crop": "Groundnut",
+    "symptoms": "Yellowing and wilting",
+    "pest": "Collar Rot",
+    "solution": "Use seed treatment with fungicide and proper spacing."
+  },
+  {
+    "crop": "Tomato",
+    "symptoms": "Wilted plants and brown vascular tissues",
+    "pest": "Bacterial Wilt",
+    "solution": "Use resistant varieties and copper oxychloride spray."
+  },
+  {
+    "crop": "Tomato",
+    "symptoms": "Fruit damage and holes",
+    "pest": "Fruit Borer",
+    "solution": "Use pheromone traps and spinosad spray."
+  },
+  {
+    "crop": "Tomato",
+    "symptoms": "Upward curling of leaves",
+    "pest": "Leaf Curl Virus",
+    "solution": "Control whiteflies and use tolerant varieties."
+  },
+  {
+    "crop": "Brinjal",
+    "symptoms": "Wilting and boring in fruits",
+    "pest": "Shoot and Fruit Borer",
+    "solution": "Remove infested shoots and apply cypermethrin."
+  },
+  {
+    "crop": "Brinjal",
+    "symptoms": "Yellowing and stunted growth",
+    "pest": "Jassids",
+    "solution": "Apply neem oil and spray imidacloprid."
+  },
+  {
+    "crop": "Brinjal",
+    "symptoms": "Mosaic patterns on leaves",
+    "pest": "Brinjal Mosaic Virus",
+    "solution": "Control aphids and remove infected plants."
+  },
+  {
+    "crop": "Chili",
+    "symptoms": "Leaf curl and puckering",
+    "pest": "Chili Leaf Curl Virus",
+    "solution": "Spray insecticides for whitefly control."
+  },
+  {
+    "crop": "Chili",
+    "symptoms": "Wilting and yellowing",
+    "pest": "Fusarium Wilt",
+    "solution": "Use resistant varieties and good drainage."
+  },
+  {
+    "crop": "Chili",
+    "symptoms": "Leaf spots and premature leaf fall",
+    "pest": "Anthracnose",
+    "solution": "Apply mancozeb or chlorothalonil."
+  },
+  {
+    "crop": "Soybean",
+    "symptoms": "Defoliation and pod damage",
+    "pest": "Semilooper",
+    "solution": "Use biological agents and avoid excessive nitrogen."
+  },
+  {
+    "crop": "Soybean",
+    "symptoms": "White fungal growth on stem base",
+    "pest": "Rhizoctonia Rot",
+    "solution": "Use seed treatment and crop rotation."
+  },
+  {
+    "crop": "Soybean",
+    "symptoms": "Yellowing and interveinal chlorosis",
+    "pest": "Yellow Mosaic Virus",
+    "solution": "Spray thiamethoxam and remove infected plants."
+  }
+]
