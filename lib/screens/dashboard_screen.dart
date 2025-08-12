@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 
 class DashboardScreen extends StatelessWidget {
-  const DashboardScreen({super.key});
+  const DashboardScreen({super.key, required String username});
 
   @override
   Widget build(BuildContext context) {

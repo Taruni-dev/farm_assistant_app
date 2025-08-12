@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'dashboard_screen.dart';
 import 'signup_screen.dart';
+import 'forgot_password_screen.dart'; // Import forgot password screen
 import '../database/db_helper.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -35,7 +36,9 @@ class _LoginScreenState extends State<LoginScreen> {
       if (isValid) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (_) => const DashboardScreen()),
+          MaterialPageRoute(
+            builder: (_) => DashboardScreen(username: name), // Pass username
+          ),
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -64,8 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
           SafeArea(
             child: Center(
               child: SingleChildScrollView(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -83,18 +85,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     TextField(
                       controller: nameController,
                       decoration: InputDecoration(
-                        prefixIcon:
-                            const Icon(Icons.person, color: Colors.blue),
+                        prefixIcon: const Icon(Icons.person, color: Colors.blue),
                         hintText: 'Name',
                         hintStyle: const TextStyle(color: Colors.black),
                         enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              const BorderSide(color: Color(0xFF91AF82)),
+                          borderSide: const BorderSide(color: Color(0xFF91AF82)),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                              color: Color(0xFF91AF82), width: 2),
+                          borderSide: const BorderSide(color: Color(0xFF91AF82), width: 2),
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
@@ -104,18 +103,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       controller: passwordController,
                       obscureText: true,
                       decoration: InputDecoration(
-                        prefixIcon:
-                            const Icon(Icons.lock, color: Colors.amber),
+                        prefixIcon: const Icon(Icons.lock, color: Colors.amber),
                         hintText: 'Password',
                         hintStyle: const TextStyle(color: Colors.black),
                         enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              const BorderSide(color: Color(0xFF91AF82)),
+                          borderSide: const BorderSide(color: Color(0xFF91AF82)),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                              color: Color(0xFF91AF82), width: 2),
+                          borderSide: const BorderSide(color: Color(0xFF91AF82), width: 2),
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
@@ -140,13 +136,27 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/forgot_password');
+                        if (nameController.text.trim().isEmpty) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text("Please enter your username first")),
+                          );
+                          return;
+                        }
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => ForgotPasswordScreen(
+                              username: nameController.text.trim(),
+                            ),
+                          ),
+                        );
                       },
                       child: const Text(
                         'Forgot Password?',
                         style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500),
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -161,8 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (_) => const SignupScreen()),
+                              MaterialPageRoute(builder: (_) => const SignupScreen()),
                             );
                           },
                           child: const Text(

@@ -10,11 +10,9 @@ import 'screens/crop_result_screen.dart';
 import 'screens/pest_help_screen.dart';
 import 'screens/pest_result_screen.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -33,16 +31,29 @@ class MyApp extends StatelessWidget {
         '/login_signup': (context) => const LoginSignupScreen(),
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignupScreen(),
-        '/forgot_password': (context) => const ForgotPasswordScreen(),
-        '/dashboard': (context) => const DashboardScreen(),
+        '/forgot_password': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments as String;
+          return ForgotPasswordScreen(username: args);
+        },
+        '/dashboard': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments as String;
+          return DashboardScreen(username: args);
+        },
         '/crop_input': (context) => const CropInputScreen(),
-        '/crop_result': (context) => const CropResultScreen(cropName: 'Crop'),
+        '/crop_result': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments as String;
+          return CropResultScreen(cropName: args);
+        },
         '/pest_help': (context) => const PestHelpScreen(),
-        '/pest_result': (context) => const PestResultScreen(
-              pestName: '',
-              symptoms: '',
-              solution: '',
-            ),
+        '/pest_result': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments
+              as Map<String, String>;
+          return PestResultScreen(
+            pestName: args['pestName'] ?? '',
+            symptoms: args['symptoms'] ?? '',
+            solution: args['solution'] ?? '',
+          );
+        },
       },
     );
   }

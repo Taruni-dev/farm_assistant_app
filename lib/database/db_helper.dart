@@ -89,13 +89,13 @@ class DBHelper {
 
   Future<int> updatePassword(String name, String newPassword) async {
     final db = await instance.database;
-    final updatedCount = await db.update(
+    final rowsUpdated = await db.update(
       'users',
       {'password': newPassword},
       where: 'name = ?',
       whereArgs: [name],
     );
-    developer.log('Password updated for $name, rows affected: $updatedCount');
-    return updatedCount;
+    developer.log('Password updated for $name: $rowsUpdated rows affected');
+    return rowsUpdated;
   }
 }
